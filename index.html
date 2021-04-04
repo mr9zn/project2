@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href = "landing.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+</head>
+<header>
+    <h1>Solving The World's Problems</h1>
+</header>
+
+<body>
+    <main>
+        <section>
+            <h2>Racial Equality</h2>
+            <p>- African Americans have the highest mortality rate for 
+                all cancers combined compared with any other racial 
+                and ethnic group</p>
+            <p>- There are 11 infant deaths per 1,000 live births among Black Americans. 
+                This is almost twice the national average of 5.8 infant deaths 
+                per 1,000 live births.</p>
+            <p>Click <a href="https://www.americanprogress.org/issues/race/reports/2020/05/07/484742/health-disparities-race-ethnicity/"> here</a>
+                    for more info </p>
+        </section>
+        <section>
+            <h2>World Hunger</h2>
+            <p>- 11.3% of the world’s population is hungry. That’s roughly 
+                805 million people who go undernourished on a daily basis</p>
+            <p>- In 2010, an estimated 7.6 million children — more than 20,000 a day 
+                — died. Poor nutrition plays a role in at least half of these deaths.</p>
+            <p>Click <a href="https://www.dosomething.org/us/facts/11-facts-about-world-hunger"> here</a>
+                for more info</p>
+        </section>
+        <section>
+            <h2>Human Trafficking</h2>
+            <p>- Trafficking involves transporting someone into a situation 
+                of exploitation. This can include forced labor, marriage, 
+                prostitution, and organ removal. </p>
+            <p>- Human trafficking earns global profits of roughly $150 billion 
+                a year for traffickers, $99 billion of which comes from commercial 
+                sexual exploitation</p>
+            <p>Click <a href="https://www.dosomething.org/us/facts/11-facts-about-human-trafficking"> here</a>
+                for more info</p>
+        </section>
+    </main>
+    
+</body>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="racial-equality-1.jpg" style="width:100%">
+      <div class="text">“Not everything that is faced can be changed, but nothing 
+          can be changed until it is faced.” – James Baldwin</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="worldhunger.jpg" style="width:100%">
+      <div class="text">"In a gentle way, you can shake the world. - Mahatma Ghandi</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="human-trafficking.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  <script>
+      var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+    <div class="form">
+        <p><h2>Join our mailing list to learn more</h2></p>
+            <form>
+                <label for="email">Email</label><br>
+                <input id = "email" type = "text" name ="email"><br>
+                <input type="submit">
+            </form>
+    </div>
+</html>
